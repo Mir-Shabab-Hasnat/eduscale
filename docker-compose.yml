@@ -12,6 +12,18 @@ services:
       - /app/node_modules
     environment:
       - NEXT_PUBLIC_API_URL=http://backend:8000
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /app
+          ignore:
+            - node_modules/
+            - .next/
+        - action: rebuild
+          path: package.json
     depends_on:
       - backend
 
@@ -32,6 +44,16 @@ services:
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
+    develop:
+      watch:
+        - action: sync
+          path: ./backend
+          target: /app
+          ignore:
+            - "__pycache__/"
+            - "*.pyc"
+        - action: rebuild
+          path: requirements.txt
     depends_on:
       - migration
 
