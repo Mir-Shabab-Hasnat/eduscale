@@ -33,7 +33,7 @@ export function Hero() {
         <div className="relative items-center w-full py-12 lg:py-20">
           <div className="text-center">
             <span className="text-sm text-emerald-300 font-medium tracking-tight bg-primary/10 px-4 py-2 rounded-full">
-              Ultimate Micro Learning Platform
+              Ultimate Grading Platform
             </span>
 
             <h1 className="mt-8 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-none">
@@ -42,7 +42,7 @@ export function Hero() {
             </h1>
 
             <p className="max-w-xl mx-auto mt-4 text-base font-light lg:text-lg text-muted-foreground tracking-tighter">
-              Replace Mindless Scrolling with Purposeful Learning.
+              See classroom statistics like never before
             </p>
             <div className="flex items-center gap-x-5 w-full justify-center mt-5 ">
               <Link href="/dashboard">
